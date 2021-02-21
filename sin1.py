@@ -1,0 +1,29 @@
+import numpy as np
+from matplotlib import pyplot as plt
+n=np.arange(1,250)
+f=125
+fs=5000
+a=5*np.sin(2*np.pi*f/fs*n+np.pi/2)
+b=10*np.sin(2*np.pi*f/fs*n+np.pi/2)
+c=a+b
+plt.subplot(3,1,1)
+plt.stem(n,c)
+plt.show()
+f1=125
+fs1=5000
+f2=300
+fs2=6000
+x=5*np.sin(2*np.pi*f1/fs1*n+np.pi/2)
+y=5*np.sin(2*np.pi*f2/fs2*n+np.pi/2)
+d=x+y
+plt.subplot(3,1,2)
+plt.stem(n,d)
+plt.show()
+f=125
+fs=5000
+u=5*np.sin(2*np.pi*f/fs*n+np.pi/3)
+v=10*np.sin(2*np.pi*f/fs*n+np.pi/6)
+w=u+v
+plt.subplot(3,1,3)
+plt.stem(n,w)
+plt.show()
